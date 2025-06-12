@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".AdminDashboardActivity">
+
+    <!-- Admin Hoş Geldin Mesajı -->
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hoş geldiniz Admin"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textAlignment="center"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Admin Panel Başlığı -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Admin Panel - Sınav Yönetimi"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/darker_gray"
+        android:textAlignment="center"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWelcome" />
+
+    <!-- PDF Seçme Alanı -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewPdfUpload"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sınav PDF'i Yükle"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_blue_dark"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Öğrenciler için sınav dosyalarını buradan yükleyebilirsiniz."
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginBottom="24dp" />
+
+            <!-- PDF Seç Butonu -->
+            <Button
+                android:id="@+id/buttonSelectPDF"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="PDF Dosyası Seç"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:background="@drawable/button_secondary"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Seçilen Dosya Adı -->
+            <TextView
+                android:id="@+id/textViewSelectedFile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seçilen dosya: dosya.pdf"
+                android:textSize="14sp"
+                android:textColor="@android:color/holo_green_dark"
+                android:textStyle="italic"
+                android:visibility="gone"
+                android:layout_marginBottom="16dp" />
+
+            <!-- PDF Yükle Butonu -->
+            <Button
+                android:id="@+id/buttonUploadPDF"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="PDF'i Yükle"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:background="@drawable/button_primary"
+                android:enabled="false" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewPdfUpload" />
+
+    <!-- Bilgi Mesajı -->
+    <TextView
+        android:id="@+id/textViewInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="💡 İpucu: Sadece PDF formatında dosyalar yükleyebilirsiniz. Dosyalar Firebase Storage'da güvenli bir şekilde saklanır."
+        android:textSize="12sp"
+        android:textColor="@android:color/darker_gray"
+        android:textAlignment="center"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/edittext_background"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout> 

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "760380957883",
+    "project_id": "examtracker-f5463",
+    "storage_bucket": "examtracker-f5463.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:760380957883:android:c01688f8b5fbacc9b2b59e",
+        "android_client_info": {
+          "package_name": "com.example.examTracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACZJfAodADrffcEiV71TRTnd0NjemVqoA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
