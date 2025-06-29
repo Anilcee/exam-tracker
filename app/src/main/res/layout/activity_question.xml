@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Ders ve Konu Bilgisi -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/textViewSubject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ders: Matematik"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_color" />
+
+                <TextView
+                    android:id="@+id/textViewTopic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Konu: Dört İşlem"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_color" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Soru Sayacı -->
+        <TextView
+            android:id="@+id/textViewQuestionCounter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Soru 1/3"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/accent_color" />
+
+        <!-- Soru Kartı -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/textViewQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bu bir örnek soru metnidir?"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_color"
+                    android:lineSpacingExtra="4dp" />
+
+                <!-- Seçenekler -->
+                <RadioGroup
+                    android:id="@+id/radioGroupAnswers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="A) Seçenek A"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_color"
+                        android:padding="8dp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="B) Seçenek B"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_color"
+                        android:padding="8dp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="C) Seçenek C"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_color"
+                        android:padding="8dp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="D) Seçenek D"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_color"
+                        android:padding="8dp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Butonlar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/buttonNext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Sonraki"
+                android:textColor="@android:color/white"
+                android:background="@color/primary_color"
+                style="@style/Widget.Material3.Button" />
+
+            <Button
+                android:id="@+id/buttonFinish"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Bitir"
+                android:textColor="@android:color/white"
+                android:background="@color/accent_color"
+                android:visibility="gone"
+                style="@style/Widget.Material3.Button" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView> 

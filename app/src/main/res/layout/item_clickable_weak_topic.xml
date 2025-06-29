@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Kırmızı daire içinde numara -->
+    <TextView
+        android:id="@+id/textViewTopicNumber"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:text="1"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/circle_red"
+        android:gravity="center"
+        android:layout_marginEnd="12dp"
+        android:layout_gravity="center_vertical" />
+
+    <!-- Konu metni -->
+    <TextView
+        android:id="@+id/textViewTopic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Paragraf ana düşüncesi"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:padding="4dp"
+        android:layout_gravity="center_vertical" />
+
+    <!-- PDF oluştur ibaresi -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:padding="4dp"
+        android:text="📄 Bu konudan soru çöz"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="12sp"
+        android:textStyle="italic" />
+
+</LinearLayout> 

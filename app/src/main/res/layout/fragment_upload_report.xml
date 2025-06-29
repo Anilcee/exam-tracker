@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Başlık -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Karne PDF'i Yükle"
+            android:textColor="@color/primary_color"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center" />
+
+        <!-- PDF Yükleme Kartı -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginHorizontal="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Deneme Karnesi Yükle"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:text="Öğrenciler için karne dosyalarını buradan yükleyebilirsiniz. Sistem otomatik olarak öğrenci bilgilerini ve sonuçları analiz edecektir."
+                    android:textColor="@color/text_color"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="4dp" />
+
+                <!-- PDF Seç Butonu -->
+                <Button
+                    android:id="@+id/buttonSelectPDF"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/accent_color"
+                    android:text="📄 PDF Dosyası Seç"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Seçilen Dosya Adı -->
+                <TextView
+                    android:id="@+id/textViewSelectedFile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Seçilen dosya: dosya.pdf"
+                    android:textColor="@color/primary_color"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:visibility="gone"
+                    android:background="@color/background_color"
+                    android:padding="12dp" />
+
+                <!-- PDF Yükle Butonu -->
+                <Button
+                    android:id="@+id/buttonUploadPDF"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@color/primary_color"
+                    android:enabled="false"
+                    android:text="⬆️ PDF'i Analiz Et"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:visibility="gone" />
+
+        <!-- Analiz Durumu Yazısı -->
+        <TextView
+            android:id="@+id/textViewAnalyzing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="📊 Analiz ediliyor..."
+            android:textColor="@color/primary_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:visibility="gone" />
+
+        <!-- Bilgi Kartı -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:layout_marginHorizontal="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@color/background_color">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="💡 Bilgi"
+                    android:textColor="@color/accent_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Sadece PDF formatında dosyalar yükleyebilirsiniz\n• Sistem öğrenci bilgilerini otomatik olarak okuyacaktır\n• Net sonuçları ve eksik konular analiz edilecektir\n• Veriler Firebase Firestore'da güvenle saklanır"
+                    android:textColor="@color/text_color"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="4dp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView> 
